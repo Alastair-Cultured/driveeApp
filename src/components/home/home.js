@@ -15,7 +15,7 @@ class Home extends Component {
     return (
       <View style={styles.container}>
 				<Text style={styles.welcome}>Welcome to Drivee!</Text>
-				<Text style={styles.instructions}>Rewarding safe driving habits</Text>
+				<Text style={styles.instructions}>Rewarding your safe driving habits</Text>
 				<Text style={styles.questionHeading}>What's your name?</Text>
 				
 				<View style={styles.inputContainer}>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
 		marginTop: 10,
 	},
 	welcome: {
-		fontSize: 20,
+		fontSize: 30,
 		textAlign: 'center',
 		margin: 10,
 	},
