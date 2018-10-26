@@ -1,4 +1,4 @@
-// 
+// react-native run-ios
 
 import React, {Component} from 'react';
 import { StyleSheet, View } from 'react-native';

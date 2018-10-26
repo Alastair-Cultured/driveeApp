@@ -3,7 +3,10 @@ import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
 
 const ListItem = props => {
 	return (
-		<TouchableOpacity onPress={props.onDealPressed}>
+		<TouchableOpacity 
+			onPress={props.onDealPressed}
+			style={styles.indiDealContainer} 
+		>
 			<View style={styles.listItem}>
 				<Image 
 					resizeMode="cover" 
@@ -12,7 +15,8 @@ const ListItem = props => {
 				/>
 				<Text>
 					<Text style={styles.dealPrice}>{props.dealPrice}</Text>
-					 {props.dealDescription} @ {props.venueName}</Text>
+					<Text>{props.dealDescription} @ {props.venueName}</Text>
+				</Text>
 			</View>
 		</TouchableOpacity>
 	);
@@ -25,7 +29,7 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: "#eee",
     flexDirection: "row",
-    alignItems: "center"
+		alignItems: "center",
 	},
 	dealImage: {
 		marginRight: 8,
@@ -34,7 +38,6 @@ const styles = StyleSheet.create({
 	},
 	dealPrice: {
 		fontWeight: 'bold',
-		fontSize: 20,
 	}
 });
 

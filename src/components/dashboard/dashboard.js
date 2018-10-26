@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { StyleSheet, View, } from 'react-native';
 
 import DealList from './dealList';
+import DealDetail from './dealDetail';
 
 class Dashboard extends Component {
 	state = {
@@ -83,7 +84,7 @@ class Dashboard extends Component {
 	
 	modalClosedHandler = () => {
     this.setState({
-      selectedPlace: null
+      selectedDeal: null
     });
 	};
 	
@@ -100,6 +101,10 @@ class Dashboard extends Component {
   render() {
     return (
 			<View style={styles.container}>
+				<DealDetail
+          selectedDeal={this.state.selectedDeal}
+					onModalClosed={this.modalClosedHandler}
+        />
 				<DealList 
 					deals={this.state.deals}
 					onDealSelected={this.dealSelectedHandler}
@@ -112,9 +117,9 @@ class Dashboard extends Component {
 const styles = StyleSheet.create({
 	container: {
     flex: 1,
-    padding: 26,
+    padding: 30,
     backgroundColor: "#F3D452",
-    alignItems: "center",
+		alignItems: "center",
     justifyContent: "flex-start"
   }
 });
