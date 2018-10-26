@@ -1,13 +1,17 @@
+// 
+
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 import Home from './src/components/home/home';
+import Dashboard from './src/components/dashboard/dashboard';
 
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Home />
+        {/* <Home /> */}
+        <Dashboard />
       </View>
     );
   }
@@ -18,7 +22,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#F3D452',
   },
-  
 });
