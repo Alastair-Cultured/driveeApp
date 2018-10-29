@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, View, Image, Text, Button, StyleSheet } from "react-native";
+import { Modal, View, Image, Text, TouchableOpacity, StyleSheet } from "react-native";
 
 const dealDetail = props => {
   let modalContent = null;
@@ -24,7 +24,12 @@ const dealDetail = props => {
 				<View style={styles.modalContainer}>
 					{modalContent}
 					<View>
-						<Button title="Close" onPress={props.onModalClosed} />
+            <TouchableOpacity
+              onPress={props.onModalClosed}
+              style={styles.closeContainer}
+            >
+              <Text style={styles.close}>Close</Text>
+            </TouchableOpacity>
 					</View>
 				</View>
 			</Modal>
@@ -43,17 +48,27 @@ const styles = StyleSheet.create({
   },
   dealImage: {
     width: "100%",
-    height: 200
+    height: 200,
   },
   dealName: {
     fontWeight: "bold",
     textAlign: "center",
-    fontSize: 50
+    fontSize: 50,
+    marginTop: 30,
+    marginBottom: 20,
   },
   dealPriceDesc: {
 		fontSize: 40,
-		textAlign: "center",
-  }
+    textAlign: "center",
+    marginBottom: 10,
+  },
+  closeContainer: {
+    textAlign: "center",
+    width: '100%',
+  },
+  close: {
+    textAlign: "center",
+  },
 });
 
 export default dealDetail;
