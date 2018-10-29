@@ -1,0 +1,2 @@
+export const SELECT_DEAL = 'SELECT_DEAL';
+export const DESELECT_DEAL = 'DESELECT_DEAL';
