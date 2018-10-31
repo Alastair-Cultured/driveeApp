@@ -14,6 +14,7 @@ class Dashboard extends Component {
 	
 	dealSelectedHandler = key => {
     this.props.onSelectDeal(key);
+    console.log('bah');
   };
 
   render() {
